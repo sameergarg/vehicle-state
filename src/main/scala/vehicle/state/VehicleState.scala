@@ -1,23 +1,21 @@
 package vehicle.state
 
-// step 1
-import akka.stream._
-import akka.stream.scaladsl._
-
-// step 2
-import akka.{ Done, NotUsed }
 import akka.actor.ActorSystem
-import akka.util.ByteString
+import akka.stream.scaladsl._
+import akka.{Done, NotUsed}
+import vehicle.state.model.{BatteryData, BatteryPercentage, Direction, DirectionState, Location}
+
 import scala.concurrent._
-import scala.concurrent.duration._
-import java.nio.file.Paths
 
 object VehicleState extends App {
   implicit val system: ActorSystem = ActorSystem("VehicleState")
   implicit val ec = system.dispatcher
-  val source: Source[Int, NotUsed] = Source(1 to 100)
 
-  val done: Future[Done] = source.runForeach(i => println(i))
+  val batteryData: Source[BatteryData, NotUsed] = ??? // TODO read from file or http
+  val batteryPercentage: Flow[BatteryData, BatteryPercentage, NotUsed] = Flow.fromFunction(BatteryPercentage(_))
 
-  done.onComplete(_ => system.terminate())
+  val sourceLocation: Source[Location, NotUsed] = ???
+  val direction: Sink[Location, Future[DirectionState]] = Sink.fold(DirectionState.start)((acc, location) => DirectionState(location, Direction.direction(acc.currentLocation, location)))
+
+
 }
