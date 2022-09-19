@@ -1,0 +1,10 @@
+[
+  {
+  "batteryCapacity": 60,
+  "stateOfCharge": 44.5
+  },
+  {
+    "batteryCapacity": 60,
+    "stateOfCharge": 40.5
+  }
+]

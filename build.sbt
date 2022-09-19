@@ -9,3 +9,6 @@ lazy val root = (project in file("."))
 
 val AkkaVersion = "2.6.20"
 libraryDependencies += "com.typesafe.akka" %% "akka-stream" % AkkaVersion
+
+val AkkaHttpVersion = "10.2.10"
+libraryDependencies += "com.typesafe.akka" %% "akka-http-spray-json" % AkkaHttpVersion
