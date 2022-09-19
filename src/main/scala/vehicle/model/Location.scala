@@ -1,4 +1,4 @@
-package vehicle.state.model
+package vehicle.model
 
 case class Location(longitude: BigDecimal, latitude: BigDecimal)
 

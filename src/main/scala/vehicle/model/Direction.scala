@@ -1,9 +1,10 @@
-package vehicle.state.model
+package vehicle.model
 
 sealed trait Direction
 
 object Direction {
-
+  // TODO refine naive implementation for direction
+  // latitude -90 to 90, longitude -180 to 180
   def direction(from: Location, to: Location): Option[Direction] = (to.latitude - from.latitude, to.longitude - from.longitude) match {
     case (lat, lon) if lat > 0 && lon == 0 => Some(East)
     case (lat, lon) if lat < 0 && lon == 0 => Some(West)

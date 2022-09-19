@@ -1,8 +1,6 @@
-package vehicle.state.model
+package vehicle.model
 
-case class VehicleState(batteryPercentage: BatteryPercentage, direction: DirectionState) {
-  def state() = s"Battery percentage =  ${batteryPercentage.value.setScale(2, BigDecimal.RoundingMode.HALF_UP)} %, direction: ${direction.currentDirection.getOrElse("")}"
-}
+case class VehicleState(batteryPercentage: BatteryPercentage, direction: DirectionState)
 
 
 object VehicleState {

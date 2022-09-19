@@ -6,5 +6,13 @@
   {
     "batteryCapacity": 60,
     "stateOfCharge": 40.5
+  },
+  {
+    "batteryCapacity": 60,
+    "stateOfCharge": 30.5
+  },
+  {
+    "batteryCapacity": 60,
+    "stateOfCharge": 10.5
   }
 ]

@@ -1,4 +1,4 @@
-package vehicle.state.model
+package vehicle.model
 
 import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
 import spray.json.DefaultJsonProtocol
