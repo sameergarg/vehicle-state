@@ -32,3 +32,21 @@ Use flows for the following:
 | Red    | 0     | 33    |
 | Yellow | 34    | 66    |
 | Green  | 67    | 100   |
+
+## Running the app
+    Sample data is part of `batteryData.json` and `locationData.json` in `resources` folder
+
+### Prerequisite
+- sbt 1.7.1 
+- Azul Systems, Inc. Java 11.0.14
+
+### Packaging and execution 
+
+#### Commandline
+- `VehicleApp` is the main class to run the application
+- Use `sbt assembly` to package the application
+  - assembled application can be found in `target/scala-2.13` folder
+- use `java - jar [assembely_jar_application.jar]` to run
+
+#### IntelliJ
+This project can be imported in IntelliJ and run `VehicleApp`

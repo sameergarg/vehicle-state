@@ -29,3 +29,5 @@ libraryDependencies += "com.h2database" % "h2" % h2Version
 val scalatestVersion = "3.2.13"
 libraryDependencies += "org.scalactic" %% "scalactic" % scalatestVersion
 libraryDependencies += "org.scalatest" %% "scalatest" % scalatestVersion % "test"
+
+// enablePlugins(JavaAppPackaging)
